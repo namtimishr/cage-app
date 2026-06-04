@@ -4,7 +4,7 @@ import DATA from "./data/countries.json";
 // ─── CAGE MARKET ENTRY INTELLIGENCE ───────────────────────────────
 // Three axes, kept deliberately separate:
 //   OPPORTUNITY (size, wealth, growth, urbanization, digital maturity)
-//   DISTANCE    (Cultural, Administrative, Geographic, Economic — CAGE)
+//   DISTANCE    (Cultural, Administrative, Geographic, Economic - CAGE)
 //   RISK        (political, regulatory, corruption, currency)
 // Hero is the 2x2 prioritization matrix; the composite is a sorting key,
 // never the verdict. Real curated data (2024 vintage) with sources.
@@ -83,15 +83,15 @@ function riskBand(R) {
 function entryMode(p) {
   const { D, R } = p;
   if (D < 18 && R < 35) return { mode: "Wholly-owned / direct", aaa: "Aggregation",
-    why: "Low distance and low risk — your operating model largely ports. Move directly and capture scale.",
+    why: "Low distance and low risk - your operating model largely ports. Move directly and capture scale.",
     pace: "Move decisively; speed is an advantage." };
   if (D < 35 && R < 50) return { mode: "Greenfield with local leadership", aaa: "Adaptation",
     why: "Navigable friction. Keep control but staff for local nuance and tailor the offer.",
     pace: "Pilot one region, prove the localised model, then scale." };
   if (D < 52 && R < 68) return { mode: "Joint venture or local acquisition", aaa: "Adaptation + Arbitrage",
-    why: "High friction — buy the market knowledge you can't build quickly through a partner or target.",
+    why: "High friction - buy the market knowledge you can't build quickly through a partner or target.",
     pace: "Sequence carefully; treat the first market as a learning investment." };
-  return { mode: "Light footprint — license / distribute / franchise", aaa: "Arbitrage",
+  return { mode: "Light footprint - license / distribute / franchise", aaa: "Arbitrage",
     why: "Severe distance and/or risk. Limit committed capital until the model is proven on the ground.",
     pace: "Stage-gate the investment and be willing to walk away." };
 }
@@ -310,7 +310,7 @@ export default function CageMEI() {
                 {dominant && (
                   <div className="dom">
                     <div className="ring" style={{ background: dominant.d.accent }}>{dominant.d.short}</div>
-                    <div className="t">Friction is dominated by <b>{dominant.d.label.toLowerCase()} distance</b> ({(dominant.v / rawDistTotal * 100).toFixed(0)}% of raw distance).{dominant.d.key === "cultural" && " Fund local product fit, language and on-the-ground talent first."}{dominant.d.key === "admin" && " Lead with regulatory, licensing and government-relations work."}{dominant.d.key === "geographic" && " The binding constraint is logistics — model landed cost and lead times."}{dominant.d.key === "economic" && " Re-engineer the offer for local income and infrastructure."}</div>
+                    <div className="t">Friction is dominated by <b>{dominant.d.label.toLowerCase()} distance</b> ({(dominant.v / rawDistTotal * 100).toFixed(0)}% of raw distance).{dominant.d.key === "cultural" && " Fund local product fit, language and on-the-ground talent first."}{dominant.d.key === "admin" && " Lead with regulatory, licensing and government-relations work."}{dominant.d.key === "geographic" && " The binding constraint is logistics - model landed cost and lead times."}{dominant.d.key === "economic" && " Re-engineer the offer for local income and infrastructure."}</div>
                   </div>
                 )}
               </>
@@ -353,8 +353,8 @@ export default function CageMEI() {
         </div>
 
         <div className="foot">
-          <b>Method.</b> Opportunity = industry-weighted blend of market size, wealth, growth, urbanisation and digital maturity (higher = better). Distance = industry-weighted CAGE (Cultural, Administrative, Geographic, Economic), home-relative. Risk = political stability, regulatory quality, corruption and currency volatility (higher = more risk). Strategic attractiveness = Opportunity − (distance penalty × Distance) − (risk penalty × Risk); it is a sorting key, shown alongside its components, never a standalone verdict. Entry-mode guidance is deterministic and rule-based so every recommendation is auditable.
-          &nbsp;<b>Data.</b> Curated 2024 snapshot from IMF WEO (Oct 2024), World Bank WDI &amp; Worldwide Governance Indicators (2023), Transparency International CPI (2024), and CEPII-style geographic/structural attributes. Figures are real and dated but hand-keyed for demonstration — verify against source before any live decision; replace via ETL for a live feed.
+          <b>Method.</b> Opportunity = industry-weighted blend of market size, wealth, growth, urbanisation and digital maturity (higher = better). Distance = industry-weighted CAGE (Cultural, Administrative, Geographic, Economic), home-relative. Risk = political stability, regulatory quality, corruption and currency volatility (higher = more risk). Strategic attractiveness = Opportunity - (distance penalty x Distance) - (risk penalty x Risk); it is a sorting key, shown alongside its components, never a standalone verdict. Entry-mode guidance is deterministic and rule-based so every recommendation is auditable.
+          &nbsp;<b>Data.</b> Curated 2024 snapshot from IMF WEO (Oct 2024), World Bank WDI &amp; Worldwide Governance Indicators (2023), Transparency International CPI (2024), and CEPII-style geographic/structural attributes. Figures are real and dated but hand-keyed for demonstration - verify against source before any live decision; replace via ETL for a live feed.
           &nbsp;<b>References.</b> Pankaj Ghemawat, "Distance Still Matters: The Hard Reality of Global Expansion," Harvard Business Review (2001); Redefining Global Strategy (Harvard Business School Press, 2007).
           <br /><br />
           Built by <a href="https://www.linkedin.com/in/namitmishr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--blue)", textDecoration: "none", fontWeight: 600 }}>Namit Mishra</a>
