@@ -1,0 +1,1461 @@
+{
+ "meta": {
+  "sources": {
+   "gdp": "IMF World Economic Outlook, Oct 2024 (nominal GDP, USD bn)",
+   "gdpPerCapita": "IMF WEO Oct 2024 (nominal GDP per capita, USD)",
+   "gdpGrowth": "IMF WEO Oct 2024 (real GDP growth %, 2024 est.)",
+   "urbanization": "World Bank WDI 2023 (% urban population)",
+   "digitalMaturity": "ITU / UN e-Gov & ICT composite, 2023 (0-100)",
+   "politicalStability": "World Bank WGI 2023 (Political Stability, rescaled 0-100)",
+   "regulatoryQuality": "World Bank WGI 2023 (Regulatory Quality, rescaled 0-100)",
+   "cpi": "Transparency International Corruption Perceptions Index 2024 (0-100)",
+   "currencyVol": "IMF / BIS 2024 (annualized FX volatility vs USD, qualitative 0-100)",
+   "distance": "CEPII GeoDist + CAGE structural attributes (illustrative-structural)"
+  },
+  "vintage": "2024",
+  "maxKm": 20000.0,
+  "note": "Curated snapshot from published figures; see sources. Replace via ETL for live feed."
+ },
+ "countries": {
+  "USA": {
+   "name": "United States",
+   "flag": "🇺🇸",
+   "raw": {
+    "gdp": 29170,
+    "gdpPerCapita": 86600,
+    "gdpGrowth": 2.8,
+    "urban": 83.3,
+    "digital": 92,
+    "polStab": 58,
+    "regQual": 89,
+    "cpi": 65,
+    "fxVol": 12
+   },
+   "opp": {
+    "size": 100,
+    "wealth": 81,
+    "growth": 43,
+    "urban": 71,
+    "digital": 100
+   },
+   "risk": {
+    "political": 42,
+    "regulatory": 11,
+    "corruption": 35,
+    "currency": 12
+   },
+   "dist": {
+    "lang": 95,
+    "religion": 60,
+    "norms": 70,
+    "legal": 85,
+    "lat": 39.8,
+    "lon": -98.6
+   }
+  },
+  "China": {
+   "name": "China",
+   "flag": "🇨🇳",
+   "raw": {
+    "gdp": 18270,
+    "gdpPerCapita": 12970,
+    "gdpGrowth": 4.8,
+    "urban": 64.6,
+    "digital": 70,
+    "polStab": 45,
+    "regQual": 42,
+    "cpi": 43,
+    "fxVol": 28
+   },
+   "opp": {
+    "size": 90,
+    "wealth": 9,
+    "growth": 78,
+    "urban": 38,
+    "digital": 48
+   },
+   "risk": {
+    "political": 55,
+    "regulatory": 58,
+    "corruption": 57,
+    "currency": 28
+   },
+   "dist": {
+    "lang": 10,
+    "religion": 20,
+    "norms": 25,
+    "legal": 30,
+    "lat": 35.9,
+    "lon": 104.2
+   }
+  },
+  "Germany": {
+   "name": "Germany",
+   "flag": "🇩🇪",
+   "raw": {
+    "gdp": 4710,
+    "gdpPerCapita": 55520,
+    "gdpGrowth": 0.0,
+    "urban": 77.6,
+    "digital": 85,
+    "polStab": 62,
+    "regQual": 90,
+    "cpi": 75,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 62,
+    "wealth": 51,
+    "growth": 0,
+    "urban": 61,
+    "digital": 83
+   },
+   "risk": {
+    "political": 38,
+    "regulatory": 10,
+    "corruption": 25,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 40,
+    "religion": 55,
+    "norms": 55,
+    "legal": 78,
+    "lat": 51.2,
+    "lon": 10.4
+   }
+  },
+  "Japan": {
+   "name": "Japan",
+   "flag": "🇯🇵",
+   "raw": {
+    "gdp": 4070,
+    "gdpPerCapita": 32860,
+    "gdpGrowth": 0.3,
+    "urban": 92.0,
+    "digital": 88,
+    "polStab": 75,
+    "regQual": 85,
+    "cpi": 71,
+    "fxVol": 20
+   },
+   "opp": {
+    "size": 59,
+    "wealth": 29,
+    "growth": 0,
+    "urban": 86,
+    "digital": 90
+   },
+   "risk": {
+    "political": 25,
+    "regulatory": 15,
+    "corruption": 29,
+    "currency": 20
+   },
+   "dist": {
+    "lang": 15,
+    "religion": 25,
+    "norms": 30,
+    "legal": 72,
+    "lat": 36.2,
+    "lon": 138.3
+   }
+  },
+  "India": {
+   "name": "India",
+   "flag": "🇮🇳",
+   "raw": {
+    "gdp": 3890,
+    "gdpPerCapita": 2700,
+    "gdpGrowth": 7.0,
+    "urban": 36.4,
+    "digital": 52,
+    "polStab": 35,
+    "regQual": 48,
+    "cpi": 38,
+    "fxVol": 18
+   },
+   "opp": {
+    "size": 58,
+    "wealth": 0,
+    "growth": 100,
+    "urban": 0,
+    "digital": 5
+   },
+   "risk": {
+    "political": 65,
+    "regulatory": 52,
+    "corruption": 62,
+    "currency": 18
+   },
+   "dist": {
+    "lang": 70,
+    "religion": 30,
+    "norms": 35,
+    "legal": 55,
+    "lat": 22.0,
+    "lon": 79.0
+   }
+  },
+  "UK": {
+   "name": "United Kingdom",
+   "flag": "🇬🇧",
+   "raw": {
+    "gdp": 3590,
+    "gdpPerCapita": 52420,
+    "gdpGrowth": 1.1,
+    "urban": 84.4,
+    "digital": 89,
+    "polStab": 60,
+    "regQual": 88,
+    "cpi": 71,
+    "fxVol": 16
+   },
+   "opp": {
+    "size": 56,
+    "wealth": 48,
+    "growth": 14,
+    "urban": 73,
+    "digital": 93
+   },
+   "risk": {
+    "political": 40,
+    "regulatory": 12,
+    "corruption": 29,
+    "currency": 16
+   },
+   "dist": {
+    "lang": 95,
+    "religion": 55,
+    "norms": 65,
+    "legal": 82,
+    "lat": 54.0,
+    "lon": -2.0
+   }
+  },
+  "France": {
+   "name": "France",
+   "flag": "🇫🇷",
+   "raw": {
+    "gdp": 3170,
+    "gdpPerCapita": 48010,
+    "gdpGrowth": 1.1,
+    "urban": 81.5,
+    "digital": 84,
+    "polStab": 55,
+    "regQual": 82,
+    "cpi": 67,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 53,
+    "wealth": 43,
+    "growth": 14,
+    "urban": 67,
+    "digital": 81
+   },
+   "risk": {
+    "political": 45,
+    "regulatory": 18,
+    "corruption": 33,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 35,
+    "religion": 55,
+    "norms": 55,
+    "legal": 80,
+    "lat": 46.2,
+    "lon": 2.2
+   }
+  },
+  "Italy": {
+   "name": "Italy",
+   "flag": "🇮🇹",
+   "raw": {
+    "gdp": 2380,
+    "gdpPerCapita": 40290,
+    "gdpGrowth": 0.7,
+    "urban": 71.7,
+    "digital": 76,
+    "polStab": 58,
+    "regQual": 74,
+    "cpi": 54,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 47,
+    "wealth": 36,
+    "growth": 7,
+    "urban": 50,
+    "digital": 62
+   },
+   "risk": {
+    "political": 42,
+    "regulatory": 26,
+    "corruption": 46,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 30,
+    "religion": 62,
+    "norms": 55,
+    "legal": 76,
+    "lat": 41.9,
+    "lon": 12.6
+   }
+  },
+  "Brazil": {
+   "name": "Brazil",
+   "flag": "🇧🇷",
+   "raw": {
+    "gdp": 2190,
+    "gdpPerCapita": 10300,
+    "gdpGrowth": 3.0,
+    "urban": 87.6,
+    "digital": 62,
+    "polStab": 42,
+    "regQual": 50,
+    "cpi": 34,
+    "fxVol": 30
+   },
+   "opp": {
+    "size": 46,
+    "wealth": 7,
+    "growth": 47,
+    "urban": 78,
+    "digital": 29
+   },
+   "risk": {
+    "political": 58,
+    "regulatory": 50,
+    "corruption": 66,
+    "currency": 30
+   },
+   "dist": {
+    "lang": 25,
+    "religion": 65,
+    "norms": 50,
+    "legal": 58,
+    "lat": -14.2,
+    "lon": -51.9
+   }
+  },
+  "Canada": {
+   "name": "Canada",
+   "flag": "🇨🇦",
+   "raw": {
+    "gdp": 2210,
+    "gdpPerCapita": 53560,
+    "gdpGrowth": 1.3,
+    "urban": 81.9,
+    "digital": 87,
+    "polStab": 72,
+    "regQual": 89,
+    "cpi": 75,
+    "fxVol": 12
+   },
+   "opp": {
+    "size": 46,
+    "wealth": 49,
+    "growth": 17,
+    "urban": 68,
+    "digital": 88
+   },
+   "risk": {
+    "political": 28,
+    "regulatory": 11,
+    "corruption": 25,
+    "currency": 12
+   },
+   "dist": {
+    "lang": 88,
+    "religion": 58,
+    "norms": 68,
+    "legal": 83,
+    "lat": 56.1,
+    "lon": -106.3
+   }
+  },
+  "Russia": {
+   "name": "Russia",
+   "flag": "🇷🇺",
+   "raw": {
+    "gdp": 2180,
+    "gdpPerCapita": 14950,
+    "gdpGrowth": 3.6,
+    "urban": 75.1,
+    "digital": 68,
+    "polStab": 22,
+    "regQual": 38,
+    "cpi": 22,
+    "fxVol": 45
+   },
+   "opp": {
+    "size": 46,
+    "wealth": 11,
+    "growth": 57,
+    "urban": 56,
+    "digital": 43
+   },
+   "risk": {
+    "political": 78,
+    "regulatory": 62,
+    "corruption": 78,
+    "currency": 45
+   },
+   "dist": {
+    "lang": 12,
+    "religion": 40,
+    "norms": 35,
+    "legal": 35,
+    "lat": 61.5,
+    "lon": 105.3
+   }
+  },
+  "Mexico": {
+   "name": "Mexico",
+   "flag": "🇲🇽",
+   "raw": {
+    "gdp": 1850,
+    "gdpPerCapita": 13970,
+    "gdpGrowth": 1.5,
+    "urban": 81.6,
+    "digital": 58,
+    "polStab": 40,
+    "regQual": 62,
+    "cpi": 26,
+    "fxVol": 24
+   },
+   "opp": {
+    "size": 42,
+    "wealth": 10,
+    "growth": 21,
+    "urban": 68,
+    "digital": 19
+   },
+   "risk": {
+    "political": 60,
+    "regulatory": 38,
+    "corruption": 74,
+    "currency": 24
+   },
+   "dist": {
+    "lang": 25,
+    "religion": 70,
+    "norms": 50,
+    "legal": 60,
+    "lat": 23.6,
+    "lon": -102.5
+   }
+  },
+  "Australia": {
+   "name": "Australia",
+   "flag": "🇦🇺",
+   "raw": {
+    "gdp": 1790,
+    "gdpPerCapita": 66590,
+    "gdpGrowth": 1.2,
+    "urban": 86.6,
+    "digital": 86,
+    "polStab": 75,
+    "regQual": 90,
+    "cpi": 77,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 41,
+    "wealth": 62,
+    "growth": 16,
+    "urban": 76,
+    "digital": 86
+   },
+   "risk": {
+    "political": 25,
+    "regulatory": 10,
+    "corruption": 23,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 90,
+    "religion": 52,
+    "norms": 66,
+    "legal": 82,
+    "lat": -25.3,
+    "lon": 133.8
+   }
+  },
+  "SouthKorea": {
+   "name": "South Korea",
+   "flag": "🇰🇷",
+   "raw": {
+    "gdp": 1760,
+    "gdpPerCapita": 34160,
+    "gdpGrowth": 2.5,
+    "urban": 81.5,
+    "digital": 90,
+    "polStab": 62,
+    "regQual": 80,
+    "cpi": 64,
+    "fxVol": 18
+   },
+   "opp": {
+    "size": 41,
+    "wealth": 30,
+    "growth": 38,
+    "urban": 67,
+    "digital": 95
+   },
+   "risk": {
+    "political": 38,
+    "regulatory": 20,
+    "corruption": 36,
+    "currency": 18
+   },
+   "dist": {
+    "lang": 15,
+    "religion": 35,
+    "norms": 35,
+    "legal": 70,
+    "lat": 36.5,
+    "lon": 127.9
+   }
+  },
+  "Spain": {
+   "name": "Spain",
+   "flag": "🇪🇸",
+   "raw": {
+    "gdp": 1730,
+    "gdpPerCapita": 35790,
+    "gdpGrowth": 2.9,
+    "urban": 81.3,
+    "digital": 82,
+    "polStab": 60,
+    "regQual": 78,
+    "cpi": 56,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 41,
+    "wealth": 31,
+    "growth": 45,
+    "urban": 67,
+    "digital": 76
+   },
+   "risk": {
+    "political": 40,
+    "regulatory": 22,
+    "corruption": 44,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 30,
+    "religion": 60,
+    "norms": 55,
+    "legal": 76,
+    "lat": 40.5,
+    "lon": -3.7
+   }
+  },
+  "Indonesia": {
+   "name": "Indonesia",
+   "flag": "🇮🇩",
+   "raw": {
+    "gdp": 1400,
+    "gdpPerCapita": 4980,
+    "gdpGrowth": 5.0,
+    "urban": 58.6,
+    "digital": 50,
+    "polStab": 45,
+    "regQual": 55,
+    "cpi": 37,
+    "fxVol": 22
+   },
+   "opp": {
+    "size": 36,
+    "wealth": 1,
+    "growth": 81,
+    "urban": 27,
+    "digital": 0
+   },
+   "risk": {
+    "political": 55,
+    "regulatory": 45,
+    "corruption": 63,
+    "currency": 22
+   },
+   "dist": {
+    "lang": 20,
+    "religion": 25,
+    "norms": 30,
+    "legal": 52,
+    "lat": -2.5,
+    "lon": 118.0
+   }
+  },
+  "Netherlands": {
+   "name": "Netherlands",
+   "flag": "🇳🇱",
+   "raw": {
+    "gdp": 1220,
+    "gdpPerCapita": 67980,
+    "gdpGrowth": 0.6,
+    "urban": 93.0,
+    "digital": 90,
+    "polStab": 70,
+    "regQual": 92,
+    "cpi": 78,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 33,
+    "wealth": 63,
+    "growth": 5,
+    "urban": 88,
+    "digital": 95
+   },
+   "risk": {
+    "political": 30,
+    "regulatory": 8,
+    "corruption": 22,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 50,
+    "religion": 50,
+    "norms": 60,
+    "legal": 80,
+    "lat": 52.1,
+    "lon": 5.3
+   }
+  },
+  "SaudiArabia": {
+   "name": "Saudi Arabia",
+   "flag": "🇸🇦",
+   "raw": {
+    "gdp": 1100,
+    "gdpPerCapita": 32880,
+    "gdpGrowth": 1.5,
+    "urban": 84.9,
+    "digital": 72,
+    "polStab": 48,
+    "regQual": 62,
+    "cpi": 59,
+    "fxVol": 8
+   },
+   "opp": {
+    "size": 31,
+    "wealth": 29,
+    "growth": 21,
+    "urban": 73,
+    "digital": 52
+   },
+   "risk": {
+    "political": 52,
+    "regulatory": 38,
+    "corruption": 41,
+    "currency": 8
+   },
+   "dist": {
+    "lang": 30,
+    "religion": 15,
+    "norms": 25,
+    "legal": 45,
+    "lat": 23.9,
+    "lon": 45.1
+   }
+  },
+  "Turkey": {
+   "name": "Turkey",
+   "flag": "🇹🇷",
+   "raw": {
+    "gdp": 1110,
+    "gdpPerCapita": 12760,
+    "gdpGrowth": 3.0,
+    "urban": 77.5,
+    "digital": 64,
+    "polStab": 32,
+    "regQual": 52,
+    "cpi": 34,
+    "fxVol": 48
+   },
+   "opp": {
+    "size": 31,
+    "wealth": 9,
+    "growth": 47,
+    "urban": 60,
+    "digital": 33
+   },
+   "risk": {
+    "political": 68,
+    "regulatory": 48,
+    "corruption": 66,
+    "currency": 48
+   },
+   "dist": {
+    "lang": 18,
+    "religion": 22,
+    "norms": 35,
+    "legal": 55,
+    "lat": 38.9,
+    "lon": 35.2
+   }
+  },
+  "Switzerland": {
+   "name": "Switzerland",
+   "flag": "🇨🇭",
+   "raw": {
+    "gdp": 940,
+    "gdpPerCapita": 106100,
+    "gdpGrowth": 1.3,
+    "urban": 74.0,
+    "digital": 91,
+    "polStab": 80,
+    "regQual": 93,
+    "cpi": 81,
+    "fxVol": 12
+   },
+   "opp": {
+    "size": 28,
+    "wealth": 100,
+    "growth": 17,
+    "urban": 54,
+    "digital": 98
+   },
+   "risk": {
+    "political": 20,
+    "regulatory": 7,
+    "corruption": 19,
+    "currency": 12
+   },
+   "dist": {
+    "lang": 42,
+    "religion": 52,
+    "norms": 58,
+    "legal": 79,
+    "lat": 46.8,
+    "lon": 8.2
+   }
+  },
+  "Poland": {
+   "name": "Poland",
+   "flag": "🇵🇱",
+   "raw": {
+    "gdp": 860,
+    "gdpPerCapita": 23010,
+    "gdpGrowth": 3.0,
+    "urban": 60.1,
+    "digital": 74,
+    "polStab": 58,
+    "regQual": 76,
+    "cpi": 53,
+    "fxVol": 18
+   },
+   "opp": {
+    "size": 26,
+    "wealth": 19,
+    "growth": 47,
+    "urban": 30,
+    "digital": 57
+   },
+   "risk": {
+    "political": 42,
+    "regulatory": 24,
+    "corruption": 47,
+    "currency": 18
+   },
+   "dist": {
+    "lang": 22,
+    "religion": 62,
+    "norms": 50,
+    "legal": 72,
+    "lat": 51.9,
+    "lon": 19.1
+   }
+  },
+  "Taiwan": {
+   "name": "Taiwan",
+   "flag": "🇹🇼",
+   "raw": {
+    "gdp": 790,
+    "gdpPerCapita": 33440,
+    "gdpGrowth": 3.7,
+    "urban": 80.0,
+    "digital": 89,
+    "polStab": 68,
+    "regQual": 84,
+    "cpi": 67,
+    "fxVol": 14
+   },
+   "opp": {
+    "size": 24,
+    "wealth": 29,
+    "growth": 59,
+    "urban": 65,
+    "digital": 93
+   },
+   "risk": {
+    "political": 32,
+    "regulatory": 16,
+    "corruption": 33,
+    "currency": 14
+   },
+   "dist": {
+    "lang": 12,
+    "religion": 30,
+    "norms": 33,
+    "legal": 70,
+    "lat": 23.7,
+    "lon": 121.0
+   }
+  },
+  "Belgium": {
+   "name": "Belgium",
+   "flag": "🇧🇪",
+   "raw": {
+    "gdp": 660,
+    "gdpPerCapita": 55540,
+    "gdpGrowth": 1.1,
+    "urban": 98.1,
+    "digital": 85,
+    "polStab": 66,
+    "regQual": 86,
+    "cpi": 69,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 20,
+    "wealth": 51,
+    "growth": 14,
+    "urban": 97,
+    "digital": 83
+   },
+   "risk": {
+    "political": 34,
+    "regulatory": 14,
+    "corruption": 31,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 45,
+    "religion": 55,
+    "norms": 58,
+    "legal": 79,
+    "lat": 50.5,
+    "lon": 4.5
+   }
+  },
+  "Argentina": {
+   "name": "Argentina",
+   "flag": "🇦🇷",
+   "raw": {
+    "gdp": 640,
+    "gdpPerCapita": 13860,
+    "gdpGrowth": -3.5,
+    "urban": 92.3,
+    "digital": 60,
+    "polStab": 48,
+    "regQual": 40,
+    "cpi": 37,
+    "fxVol": 60
+   },
+   "opp": {
+    "size": 20,
+    "wealth": 10,
+    "growth": 0,
+    "urban": 86,
+    "digital": 24
+   },
+   "risk": {
+    "political": 52,
+    "regulatory": 60,
+    "corruption": 63,
+    "currency": 60
+   },
+   "dist": {
+    "lang": 25,
+    "religion": 62,
+    "norms": 50,
+    "legal": 58,
+    "lat": -38.4,
+    "lon": -63.6
+   }
+  },
+  "Sweden": {
+   "name": "Sweden",
+   "flag": "🇸🇪",
+   "raw": {
+    "gdp": 620,
+    "gdpPerCapita": 58530,
+    "gdpGrowth": 0.9,
+    "urban": 88.7,
+    "digital": 91,
+    "polStab": 72,
+    "regQual": 91,
+    "cpi": 80,
+    "fxVol": 16
+   },
+   "opp": {
+    "size": 19,
+    "wealth": 54,
+    "growth": 10,
+    "urban": 80,
+    "digital": 98
+   },
+   "risk": {
+    "political": 28,
+    "regulatory": 9,
+    "corruption": 20,
+    "currency": 16
+   },
+   "dist": {
+    "lang": 55,
+    "religion": 48,
+    "norms": 62,
+    "legal": 81,
+    "lat": 60.1,
+    "lon": 18.6
+   }
+  },
+  "Ireland": {
+   "name": "Ireland",
+   "flag": "🇮🇪",
+   "raw": {
+    "gdp": 560,
+    "gdpPerCapita": 106060,
+    "gdpGrowth": 2.6,
+    "urban": 64.3,
+    "digital": 88,
+    "polStab": 74,
+    "regQual": 90,
+    "cpi": 77,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 17,
+    "wealth": 100,
+    "growth": 40,
+    "urban": 37,
+    "digital": 90
+   },
+   "risk": {
+    "political": 26,
+    "regulatory": 10,
+    "corruption": 23,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 90,
+    "religion": 58,
+    "norms": 64,
+    "legal": 80,
+    "lat": 53.4,
+    "lon": -8.2
+   }
+  },
+  "UAE": {
+   "name": "UAE",
+   "flag": "🇦🇪",
+   "raw": {
+    "gdp": 540,
+    "gdpPerCapita": 52400,
+    "gdpGrowth": 4.0,
+    "urban": 87.8,
+    "digital": 80,
+    "polStab": 70,
+    "regQual": 78,
+    "cpi": 68,
+    "fxVol": 7
+   },
+   "opp": {
+    "size": 16,
+    "wealth": 48,
+    "growth": 64,
+    "urban": 79,
+    "digital": 71
+   },
+   "risk": {
+    "political": 30,
+    "regulatory": 22,
+    "corruption": 32,
+    "currency": 7
+   },
+   "dist": {
+    "lang": 50,
+    "religion": 30,
+    "norms": 35,
+    "legal": 58,
+    "lat": 24.0,
+    "lon": 54.0
+   }
+  },
+  "Israel": {
+   "name": "Israel",
+   "flag": "🇮🇱",
+   "raw": {
+    "gdp": 530,
+    "gdpPerCapita": 53430,
+    "gdpGrowth": 0.7,
+    "urban": 92.9,
+    "digital": 86,
+    "polStab": 30,
+    "regQual": 83,
+    "cpi": 64,
+    "fxVol": 18
+   },
+   "opp": {
+    "size": 16,
+    "wealth": 49,
+    "growth": 7,
+    "urban": 88,
+    "digital": 86
+   },
+   "risk": {
+    "political": 70,
+    "regulatory": 17,
+    "corruption": 36,
+    "currency": 18
+   },
+   "dist": {
+    "lang": 35,
+    "religion": 35,
+    "norms": 45,
+    "legal": 72,
+    "lat": 31.0,
+    "lon": 34.8
+   }
+  },
+  "Norway": {
+   "name": "Norway",
+   "flag": "🇳🇴",
+   "raw": {
+    "gdp": 510,
+    "gdpPerCapita": 90430,
+    "gdpGrowth": 1.5,
+    "urban": 83.7,
+    "digital": 90,
+    "polStab": 80,
+    "regQual": 88,
+    "cpi": 81,
+    "fxVol": 17
+   },
+   "opp": {
+    "size": 15,
+    "wealth": 85,
+    "growth": 21,
+    "urban": 71,
+    "digital": 95
+   },
+   "risk": {
+    "political": 20,
+    "regulatory": 12,
+    "corruption": 19,
+    "currency": 17
+   },
+   "dist": {
+    "lang": 55,
+    "religion": 48,
+    "norms": 62,
+    "legal": 81,
+    "lat": 60.5,
+    "lon": 8.5
+   }
+  },
+  "Thailand": {
+   "name": "Thailand",
+   "flag": "🇹🇭",
+   "raw": {
+    "gdp": 530,
+    "gdpPerCapita": 7340,
+    "gdpGrowth": 2.8,
+    "urban": 53.6,
+    "digital": 58,
+    "polStab": 45,
+    "regQual": 58,
+    "cpi": 34,
+    "fxVol": 16
+   },
+   "opp": {
+    "size": 16,
+    "wealth": 4,
+    "growth": 43,
+    "urban": 18,
+    "digital": 19
+   },
+   "risk": {
+    "political": 55,
+    "regulatory": 42,
+    "corruption": 66,
+    "currency": 16
+   },
+   "dist": {
+    "lang": 15,
+    "religion": 20,
+    "norms": 30,
+    "legal": 55,
+    "lat": 15.9,
+    "lon": 101.0
+   }
+  },
+  "Singapore": {
+   "name": "Singapore",
+   "flag": "🇸🇬",
+   "raw": {
+    "gdp": 530,
+    "gdpPerCapita": 88450,
+    "gdpGrowth": 2.6,
+    "urban": 100.0,
+    "digital": 94,
+    "polStab": 78,
+    "regQual": 95,
+    "cpi": 84,
+    "fxVol": 10
+   },
+   "opp": {
+    "size": 16,
+    "wealth": 83,
+    "growth": 40,
+    "urban": 100,
+    "digital": 100
+   },
+   "risk": {
+    "political": 22,
+    "regulatory": 5,
+    "corruption": 16,
+    "currency": 10
+   },
+   "dist": {
+    "lang": 80,
+    "religion": 35,
+    "norms": 45,
+    "legal": 76,
+    "lat": 1.35,
+    "lon": 103.8
+   }
+  },
+  "Vietnam": {
+   "name": "Vietnam",
+   "flag": "🇻🇳",
+   "raw": {
+    "gdp": 470,
+    "gdpPerCapita": 4650,
+    "gdpGrowth": 6.1,
+    "urban": 39.5,
+    "digital": 52,
+    "polStab": 55,
+    "regQual": 50,
+    "cpi": 40,
+    "fxVol": 12
+   },
+   "opp": {
+    "size": 13,
+    "wealth": 1,
+    "growth": 100,
+    "urban": 0,
+    "digital": 5
+   },
+   "risk": {
+    "political": 45,
+    "regulatory": 50,
+    "corruption": 60,
+    "currency": 12
+   },
+   "dist": {
+    "lang": 12,
+    "religion": 22,
+    "norms": 28,
+    "legal": 40,
+    "lat": 14.1,
+    "lon": 108.3
+   }
+  },
+  "Philippines": {
+   "name": "Philippines",
+   "flag": "🇵🇭",
+   "raw": {
+    "gdp": 470,
+    "gdpPerCapita": 4130,
+    "gdpGrowth": 5.8,
+    "urban": 48.3,
+    "digital": 50,
+    "polStab": 40,
+    "regQual": 54,
+    "cpi": 33,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 13,
+    "wealth": 1,
+    "growth": 95,
+    "urban": 9,
+    "digital": 0
+   },
+   "risk": {
+    "political": 60,
+    "regulatory": 46,
+    "corruption": 67,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 55,
+    "religion": 68,
+    "norms": 45,
+    "legal": 56,
+    "lat": 12.9,
+    "lon": 121.8
+   }
+  },
+  "Malaysia": {
+   "name": "Malaysia",
+   "flag": "🇲🇾",
+   "raw": {
+    "gdp": 440,
+    "gdpPerCapita": 12570,
+    "gdpGrowth": 4.8,
+    "urban": 78.4,
+    "digital": 66,
+    "polStab": 58,
+    "regQual": 68,
+    "cpi": 50,
+    "fxVol": 14
+   },
+   "opp": {
+    "size": 12,
+    "wealth": 9,
+    "growth": 78,
+    "urban": 62,
+    "digital": 38
+   },
+   "risk": {
+    "political": 42,
+    "regulatory": 32,
+    "corruption": 50,
+    "currency": 14
+   },
+   "dist": {
+    "lang": 35,
+    "religion": 25,
+    "norms": 35,
+    "legal": 62,
+    "lat": 4.2,
+    "lon": 101.9
+   }
+  },
+  "Denmark": {
+   "name": "Denmark",
+   "flag": "🇩🇰",
+   "raw": {
+    "gdp": 420,
+    "gdpPerCapita": 68900,
+    "gdpGrowth": 1.9,
+    "urban": 88.6,
+    "digital": 92,
+    "polStab": 76,
+    "regQual": 92,
+    "cpi": 90,
+    "fxVol": 15
+   },
+   "opp": {
+    "size": 11,
+    "wealth": 64,
+    "growth": 28,
+    "urban": 80,
+    "digital": 100
+   },
+   "risk": {
+    "political": 24,
+    "regulatory": 8,
+    "corruption": 10,
+    "currency": 15
+   },
+   "dist": {
+    "lang": 55,
+    "religion": 50,
+    "norms": 62,
+    "legal": 81,
+    "lat": 56.3,
+    "lon": 9.5
+   }
+  },
+  "SouthAfrica": {
+   "name": "South Africa",
+   "flag": "🇿🇦",
+   "raw": {
+    "gdp": 400,
+    "gdpPerCapita": 6390,
+    "gdpGrowth": 1.1,
+    "urban": 68.3,
+    "digital": 56,
+    "polStab": 40,
+    "regQual": 58,
+    "cpi": 41,
+    "fxVol": 26
+   },
+   "opp": {
+    "size": 10,
+    "wealth": 3,
+    "growth": 14,
+    "urban": 44,
+    "digital": 14
+   },
+   "risk": {
+    "political": 60,
+    "regulatory": 42,
+    "corruption": 59,
+    "currency": 26
+   },
+   "dist": {
+    "lang": 62,
+    "religion": 58,
+    "norms": 48,
+    "legal": 66,
+    "lat": -30.6,
+    "lon": 22.9
+   }
+  },
+  "HongKong": {
+   "name": "Hong Kong",
+   "flag": "🇭🇰",
+   "raw": {
+    "gdp": 410,
+    "gdpPerCapita": 54590,
+    "gdpGrowth": 2.7,
+    "urban": 100.0,
+    "digital": 90,
+    "polStab": 60,
+    "regQual": 90,
+    "cpi": 74,
+    "fxVol": 9
+   },
+   "opp": {
+    "size": 10,
+    "wealth": 50,
+    "growth": 41,
+    "urban": 100,
+    "digital": 95
+   },
+   "risk": {
+    "political": 40,
+    "regulatory": 10,
+    "corruption": 26,
+    "currency": 9
+   },
+   "dist": {
+    "lang": 70,
+    "religion": 30,
+    "norms": 40,
+    "legal": 74,
+    "lat": 22.3,
+    "lon": 114.2
+   }
+  },
+  "Egypt": {
+   "name": "Egypt",
+   "flag": "🇪🇬",
+   "raw": {
+    "gdp": 380,
+    "gdpPerCapita": 3510,
+    "gdpGrowth": 2.7,
+    "urban": 43.1,
+    "digital": 44,
+    "polStab": 28,
+    "regQual": 42,
+    "cpi": 30,
+    "fxVol": 40
+   },
+   "opp": {
+    "size": 9,
+    "wealth": 0,
+    "growth": 41,
+    "urban": 0,
+    "digital": 0
+   },
+   "risk": {
+    "political": 72,
+    "regulatory": 58,
+    "corruption": 70,
+    "currency": 40
+   },
+   "dist": {
+    "lang": 30,
+    "religion": 15,
+    "norms": 28,
+    "legal": 48,
+    "lat": 26.8,
+    "lon": 30.8
+   }
+  },
+  "Colombia": {
+   "name": "Colombia",
+   "flag": "🇨🇴",
+   "raw": {
+    "gdp": 420,
+    "gdpPerCapita": 7960,
+    "gdpGrowth": 1.6,
+    "urban": 82.3,
+    "digital": 56,
+    "polStab": 38,
+    "regQual": 62,
+    "cpi": 39,
+    "fxVol": 24
+   },
+   "opp": {
+    "size": 11,
+    "wealth": 4,
+    "growth": 22,
+    "urban": 69,
+    "digital": 14
+   },
+   "risk": {
+    "political": 62,
+    "regulatory": 38,
+    "corruption": 61,
+    "currency": 24
+   },
+   "dist": {
+    "lang": 25,
+    "religion": 64,
+    "norms": 48,
+    "legal": 58,
+    "lat": 4.6,
+    "lon": -74.3
+   }
+  },
+  "Nigeria": {
+   "name": "Nigeria",
+   "flag": "🇳🇬",
+   "raw": {
+    "gdp": 250,
+    "gdpPerCapita": 1110,
+    "gdpGrowth": 3.1,
+    "urban": 54.0,
+    "digital": 36,
+    "polStab": 18,
+    "regQual": 40,
+    "cpi": 26,
+    "fxVol": 50
+   },
+   "opp": {
+    "size": 0,
+    "wealth": 0,
+    "growth": 48,
+    "urban": 19,
+    "digital": 0
+   },
+   "risk": {
+    "political": 82,
+    "regulatory": 60,
+    "corruption": 74,
+    "currency": 50
+   },
+   "dist": {
+    "lang": 65,
+    "religion": 45,
+    "norms": 30,
+    "legal": 42,
+    "lat": 9.1,
+    "lon": 8.7
+   }
+  }
+ }
+}
