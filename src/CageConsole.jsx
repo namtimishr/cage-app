@@ -120,8 +120,8 @@ function Matrix({ rows, onPick, selected }) {
       })}
       <line x1={W / 2} y1={pad} x2={W / 2} y2={H - pad} stroke="#c9dae6" strokeWidth="1" strokeDasharray="3 4" />
       <line x1={pad} y1={H / 2} x2={W - pad} y2={H / 2} stroke="#c9dae6" strokeWidth="1" strokeDasharray="3 4" />
-      <text x={W / 2} y={H - 16} textAnchor="middle" className="axlabel">← more distant      DISTANCE      nearer →</text>
-      <text x={16} y={H / 2} textAnchor="middle" className="axlabel" transform={`rotate(-90 16 ${H / 2})`}>← lower      OPPORTUNITY      higher →</text>
+      <text x={W / 2} y={H - 16} textAnchor="middle" className="axlabel">← more distant                    DISTANCE                    nearer →</text>
+      <text x={16} y={H / 2} textAnchor="middle" className="axlabel" transform={`rotate(-90 16 ${H / 2})`}>← lower                    OPPORTUNITY                    higher →</text>
       {rows.map((p, i) => {
         const rb = riskBand(p.R);
         const isSel = selected === p.code;
@@ -254,9 +254,9 @@ export default function CageMEI() {
       <div className="wrap">
         <div className="head">
           <div>
-            <div className="ey">CAGE Market Entry Intelligence</div>
+            <div className="ey">Market Entry Intelligence Based on CAGE Framework</div>
             <h1 className="h1">Where to expand, and <i>how</i></h1>
-            <p className="sub">Opportunity, distance and risk on three separate axes — because collapsing them into one number hides the shape of the bet. Real 2024 data; the matrix is the decision, the score only sorts it.</p>
+            <p className="sub">Opportunity, distance and risk on three separate axes because collapsing them into one number hides the shape of the bet. Real 2024 data; the matrix is the decision, the score only sorts it.</p>
           </div>
         </div>
 
@@ -281,7 +281,7 @@ export default function CageMEI() {
         <div className="grid">
           <div className="card">
             <h3 className="ctitle">Prioritisation matrix</h3>
-            <p className="cnote">Opportunity (vertical) against CAGE distance (horizontal); bubble colour = risk. Click any market to inspect it. This is where the decision is read — not from a single score.</p>
+            <p className="cnote">Opportunity (vertical) against CAGE distance (horizontal); bubble colour = risk. Click any market to inspect it.</p>
             <Matrix rows={shortRows} onPick={setSelected} selected={selected} />
 
             {sel && (
