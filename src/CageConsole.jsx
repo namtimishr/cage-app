@@ -356,6 +356,9 @@ export default function CageMEI() {
           <b>Method.</b> Opportunity = industry-weighted blend of market size, wealth, growth, urbanisation and digital maturity (higher = better). Distance = industry-weighted CAGE (Cultural, Administrative, Geographic, Economic), home-relative. Risk = political stability, regulatory quality, corruption and currency volatility (higher = more risk). Strategic attractiveness = Opportunity − (distance penalty × Distance) − (risk penalty × Risk); it is a sorting key, shown alongside its components, never a standalone verdict. Entry-mode guidance is deterministic and rule-based so every recommendation is auditable.
           &nbsp;<b>Data.</b> Curated 2024 snapshot from IMF WEO (Oct 2024), World Bank WDI &amp; Worldwide Governance Indicators (2023), Transparency International CPI (2024), and CEPII-style geographic/structural attributes. Figures are real and dated but hand-keyed for demonstration — verify against source before any live decision; replace via ETL for a live feed.
           &nbsp;<b>References.</b> Pankaj Ghemawat, "Distance Still Matters: The Hard Reality of Global Expansion," Harvard Business Review (2001); Redefining Global Strategy (Harvard Business School Press, 2007).
+          <br /><br />
+          Built by <a href="https://www.linkedin.com/in/namitmishr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--blue)", textDecoration: "none", fontWeight: 600 }}>Namit Mishra</a>
+        </div>
         </div>
       </div>
     </div>
