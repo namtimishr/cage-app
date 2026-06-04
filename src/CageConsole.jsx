@@ -359,7 +359,6 @@ export default function CageMEI() {
           <br /><br />
           Built by <a href="https://www.linkedin.com/in/namitmishr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--blue)", textDecoration: "none", fontWeight: 600 }}>Namit Mishra</a>
         </div>
-        </div>
       </div>
     </div>
   );
